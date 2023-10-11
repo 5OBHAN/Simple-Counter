@@ -1,0 +1,22 @@
+# Compiled class files
+target/
+
+# Generated files
+bin/
+gen/
+out/
+
+# IDE-specific files
+.idea/
+
+# Maven-specific files
+.mvn/
+mvnw
+mvnw.cmd
+
+# Log files
+*.log
+
+# Operating System files
+.DS_Store
+Thumbs.db

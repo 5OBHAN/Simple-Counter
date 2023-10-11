@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "counterApp",
+            "request": "launch",
+            "mainClass": "com.simplecounter/com.simplecounter.counterApp",
+            "projectName": "counter",
+        }
+    ]
+}

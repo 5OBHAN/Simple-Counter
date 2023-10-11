@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'Bungee';
+    src: url(assets/fonts/BungeeRegular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'DoppioOne';
+    src: url(assets/fonts/DoppioOne.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Orbitron Black';
+    src: url(assets/fonts/OrbitronBlack.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Righteous';
+    src: url(assets/fonts/RighteousRegular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Segoe UI Variable';
+    src: url(assets/fonts/SegoeUI-VF.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Tourney Black';
+    src: url(assets/fonts/TourneyBlack.ttf) format('truetype');
+}
+
+
+.root {
+    -fx-background-color: transparent;
+        background-color: transparent;
+}
+
+#anchorPane {
+    -fx-background-color: linear-gradient(from 10% 100% to 90% 0%, #02001f, #57082d);
+        background-color: linear-gradient(from 10% 100% to 90% 0%, #02001f, #57082d);
+    -fx-background-radius: 30;
+    -fx-border-color: linear-gradient(from 50% 0% to 80% 80%, #ffffff80 0%, transparent 40%, #ffffff50 100%);
+        border-color: linear-gradient(from 50% 0% to 80% 80%, #ffffff80 0%, transparent 40%, #ffffff50 100%);
+    -fx-border-radius: 30;
+        border-radius: 30;
+    -fx-border-width: 1;
+        border-width: 1;
+}
+
+#titleBar {
+    -fx-background-color: transparent;
+        background-color: transparent;
+}
+
+#title {
+    -fx-font-family: 'Orbitron Black';
+        font-family: 'Orbitron Black';
+    -fx-font-size: 14px;
+        font-size: 14px;
+}
+
+.close-button {
+    -fx-background-radius: 10;
+    -fx-background-color: transparent;
+        background-color: transparent;
+    -fx-border-color: red;
+        border-color: red;
+    -fx-border-radius: 10;
+        border-radius: 10;
+    -fx-border-width: 2;
+        border-width: 2;
+    -fx-background-insets: 0;
+}
+
+.close-button:hover {
+    -fx-background-color: red;
+        background-color: red;
+}
+
+.close-button:pressed {
+    -fx-background-color: red;
+        background-color: red;
+    -fx-opacity: 0.7;
+        opacity: 0.7;
+}
+
+.minimize-button {
+    -fx-background-radius: 10;
+    -fx-background-color: transparent;
+        background-color: transparent;
+    -fx-border-color: orange;
+        border-color: orange;
+    -fx-border-radius: 10;
+        border-radius: 10;
+    -fx-border-width: 2;
+        border-width: 2;
+    -fx-background-insets: 0;
+}
+
+.minimize-button:hover {
+    -fx-background-color: orange;
+        background-color: orange;
+}
+
+.minimize-button:pressed {
+    -fx-background-color: orange;
+        background-color: orange;
+    -fx-opacity: 0.7;
+        opacity: 0.7;
+}
+
+#overlayPane {
+    -fx-background-color: linear-gradient(from 0% 0% to 40% 100%, #ffffffee, transparent);
+        background-color: linear-gradient(from 0% 0% to 40% 100%, #ffffffee, transparent);
+    -fx-background-radius: 30;
+    -fx-opacity: 0.25;
+        opacity: 0.25;
+}
+
+#resultLabel {
+    -fx-font-family: 'Tourney Black';
+        font-family: 'Tourney Black';
+    -fx-font-size: 15px;
+        font-size: 15px;
+}
+
+#resultTextDisplay {
+    -fx-alignment: center;
+    -fx-text-fill: #70b3ff;
+    -fx-font-family: 'Doppio One Regular';
+        font-family: 'Doppio One Regular';
+    -fx-font-size: 25px;
+        font-size: 25px;
+}
+
+#inputBox {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 17;
+    -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #ffffff50, transparent);
+        border-color: linear-gradient(from 0% 0% to 100% 100%, #ffffff50, transparent);
+    -fx-border-radius: 17;
+        border-radius: 17;
+    -fx-border-width: 2;
+        border-width: 2;
+}
+
+#inputField {
+    -fx-background-color: transparent;
+        background-color: transparent;
+    -fx-text-fill: #f5f5f5c5;
+    -fx-font-family: 'Doppio One Regular';
+        font-family: 'Doppio One Regular';
+    -fx-font-size: 20px;
+        font-size: 20px;
+    -fx-effect: dropShadow(gaussian, rgba(0,0,0,0.3), 4.5, 0.0, 0.0, 2.0);
+    /*          dropshadow(<blur-type>, <color>, <radius>, <spread>, <offset-x>, <offset-y>); */
+}
+
+#btnRing {
+    -fx-stroke: #f5f5f560;
+        stroke: #f5f5f560;
+}
+
+#countBtn {
+    -fx-background-color: #000000dc;
+        background-color: #000000dc;
+    -fx-background-radius: 11;
+    -fx-background-insets: 0;
+    -fx-text-fill: #15eb66c5;
+    -fx-font-family: 'Righteous';
+        font-family: 'Righteous';
+    -fx-font-size: 14px;
+        font-size: 14px;
+}
+
+#countBtn:hover {
+    -fx-background-color: #15eb66c5;
+        background-color: #15eb66c5;
+    -fx-text-fill: #000;
+}
+
+#countBtn:pressed {
+    -fx-background-color: #ffffffc5;
+        background-color: #ffffffc5;
+    -fx-text-fill: #000;
+}
+
+#cancelBtn {
+    -fx-text-fill: white;
+    -fx-background-color: #000000dc;
+        background-color: #000000dc;
+    -fx-background-radius: 11;
+}
+
+#cancelBtn:hover {
+    -fx-background-color: #db1616c5;
+        background-color: #db1616c5;
+}
+
+#cancelBtn:pressed {
+    -fx-background-color: #ffffffc5;
+        background-color: #ffffffc5;
+}
+
+#progressLabel {
+    -fx-font-family: 'Bungee';
+        font-family: 'Bungee';
+    -fx-font-size: 12px;
+        font-size: 12px;
+}
+
+#percentSym {
+    -fx-font-family: 'Segoe UI Variable';
+        font-family: 'Segoe UI Variable';
+    -fx-font-size: 12px;
+        font-size: 12px;
+}
+
+#progressLabel, #percentSym {
+    -fx-text-fill: white;
+}
+
+#cancelLabel {
+    -fx-font-family: 'Righteous';
+        font-family: 'Righteous';
+    -fx-font-size: 14px;
+        font-size: 14px;
+    -fx-text-fill: #db1616;
+}
+
+#cancelBtn:hover #cancelLabel {
+    -fx-text-fill: #000;
+}
+
+#cancelBtn:pressed #progressLabel,
+#cancelBtn:pressed #percentSym,
+#cancelBtn:pressed #cancelLabel {
+    -fx-text-fill: #000;
+}
+
+.shadow {
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.3), 10.0, 0.0, 0.0, 10.0);
+}
+
+#tooltipClose, #tooltipMinimize {
+    -fx-background-color: #252525;
+        background-color: #252525;
+    -fx-background-radius: 8;
+    -fx-border-color: #ffffff50;
+        border-color: #3a3a3a;
+    -fx-border-radius: 8;
+        border-radius: 8;
+    -fx-text-fill: #a0a0a0;
+    -fx-font-size: 12;
+        font-size: 12;
+    -fx-padding: 2px 8px;
+        padding: 2px 8px;
+    -fx-effect: none;
+}
+
+#progressBar {
+    -fx-accent: #568001c5;
+}
+
+#progressBar > .bar {
+    -fx-background-color: linear-gradient(from 0px 0px to 15px 15px,
+                repeat,
+                derive(-fx-accent, 35%) 0%,
+                -fx-accent 3%,
+                -fx-accent 50%,
+                derive(-fx-accent, 35%) 53%);
+        background-color: linear-gradient(from 0px 0px to 15px 15px,
+                repeat,
+                derive(-fx-accent,35%) 0%,
+                -fx-accent 3%,
+                -fx-accent 50%,
+                derive(-fx-accent, 35%) 53%);
+    -fx-background-insets: 3;
+    -fx-background-radius: 15.2;
+}
+
+#progressBar > .track {
+    -fx-border-radius: 17;
+        border-radius: 17;
+    -fx-background-color: transparent;
+        background-color: transparent;
+    -fx-background-radius: 17;
+}
