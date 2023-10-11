@@ -27,14 +27,43 @@
             <version>${javafx.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>jakarta.json</groupId>
+            <artifactId>jakarta.json-api</artifactId>
+            <version>2.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.parsson</groupId>
+            <artifactId>parsson</artifactId>
+            <version>1.1.4</version>
+        </dependency>
+
+        <dependency>
+            <!-- JavaFX-Blur library @ https://github.com/kieferlam/JavaFX-Blur -->
+            <groupId>com.kieferlam</groupId>
+            <artifactId>javafxblur</artifactId>
+            <scope>system</scope>
+            <version>0.0.2</version>
+            <systemPath>${project.basedir}/lib/javafxblur.jar</systemPath>
+        </dependency>
+
     </dependencies>
 
     <build>
 
         <resources>
+
+            <!-- <directory>src/main/resources</directory>
+            <filtering>true</filtering> -->
+            <!-- <includes>
+                <include>config.json</include>
+            </includes> -->
+            
             <resource>
                 <directory>src/main/resources</directory>
             </resource>
+            
         </resources>
 
         <plugins>
@@ -58,7 +87,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.simplecounter.counterApp</mainClass>
+                            <mainClass>${fully.qualified.main.class}</mainClass>
                         </configuration>
                     </execution>
                 </executions>

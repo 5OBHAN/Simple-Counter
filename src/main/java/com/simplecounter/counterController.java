@@ -5,13 +5,21 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
@@ -60,6 +68,8 @@ public class counterController implements Initializable {
     @FXML
     private HBox inputBox;
 
+    private Timeline timeline;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -72,6 +82,7 @@ public class counterController implements Initializable {
         clipProgressBar(15.2, 3);
         initInputFilter();
         initKeyCombinationFilters();
+        // initProgressBarAnimation();
 
         System.out.println();
         System.out.println("\033[0;90m[LOG] [" + getCurrentLocalTime() + "] :\033[95m Application started.\033[0m");
@@ -144,7 +155,7 @@ public class counterController implements Initializable {
             System.err.println("\033[0;90m[LOG] [" + getCurrentLocalTime() + "] :\033[0;91m [ERROR] Task is already running. \033[0m");
             return;
         }
-        
+
         disableInputField(true);
         
         countBtn.setDisable(true);
@@ -160,6 +171,11 @@ public class counterController implements Initializable {
 
         // Updates progress bar
         progressBar.progressProperty().bind(counter.progressProperty());
+        // progressBar.progressProperty().addListener((obs, old, val) -> {
+        //     if (old.doubleValue() <= 0 && val.doubleValue() > 0) {
+        //         timeline.playFromStart();
+        //     }
+        // });
 
         // Updates progress percentage
         progressLabel.textProperty().bind(counter.messageProperty());
@@ -319,7 +335,7 @@ public class counterController implements Initializable {
             }
             else if (event.isAltDown() && event.getCode() == KeyCode.F4) {
                 event.consume();
-                handleRedButtonClick(); // Application's  Exit (Alt+F4) action
+                handleRedButtonClick(); // Application's Exit (Alt+F4) action
             }
         });
     }
@@ -355,4 +371,37 @@ public class counterController implements Initializable {
         delay.play(); // Revert back after the delay
     }
 
+
+
+    // private void initProgressBarAnimation() {
+    //     ObjectProperty<Node> node = new SimpleObjectProperty<>();
+    //     ProgressBar bar = new ProgressBar(0) {
+    //         @Override
+    //         protected void layoutChildren() {
+    //             super.layoutChildren();
+    //             if (node.get() == null) {
+    //                 Node n = lookup(".bar");
+    //                 node.set(n);
+    //                 int stripWidth = 15;
+    //                 IntegerProperty x = new SimpleIntegerProperty(0);
+    //                 IntegerProperty y = new SimpleIntegerProperty(stripWidth);
+    //                 timeline = new Timeline(new KeyFrame(Duration.millis(35), (e) -> {
+    //                     x.set(x.get() + 1);
+    //                     y.set(y.get() + 1);                        
+    //                     String style = "-fx-background-color: linear-gradient(from " + x.get() + "px " + x.get() + "px to " + y.get() + "px " + y.get() + "px, repeat, -fx-accent 50%, derive(-fx-accent, 30%) 50%);";
+    //                     n.setStyle(style);
+    //                     if (x.get() >= stripWidth * 2) {
+    //                         x.set(0);
+    //                         y.set(stripWidth);
+    //                     }
+    //                 }));
+    //                 timeline.setCycleCount(Animation.INDEFINITE);
+    //             }
+    //         }
+    //     };
+
+    //     // progress bar color property
+    //     String barColor = ("#558001");
+    //     bar.setStyle("-fx-accent: " + barColor + ";");
+    // }
 }

@@ -1,0 +1,12 @@
+{
+    "application": {
+        "name": "Simple Counter",
+        "version": "${project.version}",
+        "description": "A JavaFX application that does Summation to 'n' terms of Arithmatic Progression by Counting Values one at a time.",
+        "developer": {
+            "name": "Sobhan Bhowmick",
+            "id": "@5OBHAN",
+            "profile": "https://github.com/5OBHAN"
+        }
+    }
+}

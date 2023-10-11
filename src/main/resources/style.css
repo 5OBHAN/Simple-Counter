@@ -22,16 +22,29 @@
     font-family: 'Tourney Black';
     src: url(assets/fonts/TourneyBlack.ttf) format('truetype');
 }
+@font-face {
+    font-family: 'Tourney SemiCondensed Black';
+    src: url(assets/fonts/TourneySemiCondensedBlack.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Tourney SemiExpanded Black';
+    src: url(assets/fonts/TourneySemiExpandedBlack.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Turret Road ExtraBold';
+    src: url(assets/fonts/TurretRoadExtraBold.ttf) format('truetype');
+}
 
 
 .root {
     -fx-background-color: transparent;
-        background-color: transparent;
+    background-color: transparent;
 }
 
 #anchorPane {
-    -fx-background-color: linear-gradient(from 10% 100% to 90% 0%, #02001f, #57082d);
-        background-color: linear-gradient(from 10% 100% to 90% 0%, #02001f, #57082d);
+    /* -fx-background-color: linear-gradient(from 10% 100% to 90% 0%, #02001fde, #57082dad); */
+    -fx-background-color: linear-gradient(from 10% 100% to 90% 0%, #02001f, #57082dd8);
+        background-color: linear-gradient(from 10% 100% to 90% 0%, #02001f, #57082dd8);
     -fx-background-radius: 30;
     -fx-border-color: linear-gradient(from 50% 0% to 80% 80%, #ffffff80 0%, transparent 40%, #ffffff50 100%);
         border-color: linear-gradient(from 50% 0% to 80% 80%, #ffffff80 0%, transparent 40%, #ffffff50 100%);
@@ -48,7 +61,6 @@
 
 #title {
     -fx-font-family: 'Orbitron Black';
-        font-family: 'Orbitron Black';
     -fx-font-size: 14px;
         font-size: 14px;
 }
@@ -113,7 +125,6 @@
 
 #resultLabel {
     -fx-font-family: 'Tourney Black';
-        font-family: 'Tourney Black';
     -fx-font-size: 15px;
         font-size: 15px;
 }
@@ -122,7 +133,6 @@
     -fx-alignment: center;
     -fx-text-fill: #70b3ff;
     -fx-font-family: 'Doppio One Regular';
-        font-family: 'Doppio One Regular';
     -fx-font-size: 25px;
         font-size: 25px;
 }
@@ -144,7 +154,6 @@
         background-color: transparent;
     -fx-text-fill: #f5f5f5c5;
     -fx-font-family: 'Doppio One Regular';
-        font-family: 'Doppio One Regular';
     -fx-font-size: 20px;
         font-size: 20px;
     -fx-effect: dropShadow(gaussian, rgba(0,0,0,0.3), 4.5, 0.0, 0.0, 2.0);
@@ -163,7 +172,6 @@
     -fx-background-insets: 0;
     -fx-text-fill: #15eb66c5;
     -fx-font-family: 'Righteous';
-        font-family: 'Righteous';
     -fx-font-size: 14px;
         font-size: 14px;
 }
@@ -199,14 +207,12 @@
 
 #progressLabel {
     -fx-font-family: 'Bungee';
-        font-family: 'Bungee';
     -fx-font-size: 12px;
         font-size: 12px;
 }
 
 #percentSym {
     -fx-font-family: 'Segoe UI Variable';
-        font-family: 'Segoe UI Variable';
     -fx-font-size: 12px;
         font-size: 12px;
 }
@@ -217,7 +223,6 @@
 
 #cancelLabel {
     -fx-font-family: 'Righteous';
-        font-family: 'Righteous';
     -fx-font-size: 14px;
         font-size: 14px;
     -fx-text-fill: #db1616;
@@ -254,22 +259,19 @@
 }
 
 #progressBar {
-    -fx-accent: #568001c5;
+    /* -fx-accent: #558001c5; */
+    
+    -fx-accent: #fff;
+    -fx-blend-mode: overlay;
 }
 
 #progressBar > .bar {
-    -fx-background-color: linear-gradient(from 0px 0px to 15px 15px,
+    /* -fx-background-color: linear-gradient(from 0px 0px to 20px 20px,
                 repeat,
                 derive(-fx-accent, 35%) 0%,
                 -fx-accent 3%,
                 -fx-accent 50%,
-                derive(-fx-accent, 35%) 53%);
-        background-color: linear-gradient(from 0px 0px to 15px 15px,
-                repeat,
-                derive(-fx-accent,35%) 0%,
-                -fx-accent 3%,
-                -fx-accent 50%,
-                derive(-fx-accent, 35%) 53%);
+                derive(-fx-accent, 35%) 53%); */
     -fx-background-insets: 3;
     -fx-background-radius: 15.2;
 }
@@ -279,5 +281,6 @@
         border-radius: 17;
     -fx-background-color: transparent;
         background-color: transparent;
+    /* -fx-background-color: rgb(255, 255, 255); */
     -fx-background-radius: 17;
 }
